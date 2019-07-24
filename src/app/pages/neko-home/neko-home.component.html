@@ -1,0 +1,28 @@
+<mat-toolbar class="navbar" color="primary">
+  <div class="container">
+    <div fxLayoutAlign="start center">
+      <div fxFlex></div>
+      <button mat-icon-button (click)="this.refresh.next(true)" [disabled]="this.loading$ | async">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <ng-container *ngIf="this.items$ | async as ims">
+        <mat-select
+          class="neko-select"
+          [value]="this.defaultItem | async"
+          (selectionChange)="this.changeSelection($event)"
+          placeholder=""
+        >
+          <mat-option *ngFor="let item of ims" [value]="item">
+            {{ item.displayName }}
+          </mat-option>
+        </mat-select>
+      </ng-container>
+    </div>
+  </div>
+</mat-toolbar>
+
+<ng-container *ngIf="this.image$ | async as imageUrl">
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <img class="neko-image-container" [src]="imageUrl" (load)="this.imageDoneLoading($event)" alt="neko" />
+  </div>
+</ng-container>

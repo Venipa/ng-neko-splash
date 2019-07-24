@@ -1,0 +1,10 @@
+.mat-selection-list {
+  margin: 0 -24px;
+  .mat-list-option ::ng-deep .mat-list-item-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.mat-dialog-title > h4 {
+  margin: 0;
+}

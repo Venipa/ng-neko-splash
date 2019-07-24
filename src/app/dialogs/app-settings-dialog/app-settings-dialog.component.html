@@ -1,0 +1,20 @@
+<div matDialogTitle fxLayout="row" fxLayoutAlign="start center">
+  <h4>App Settings</h4>
+  <div fxFlex></div>
+  <button mat-icon-button matDialogClose>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+  <mat-selection-list dense (selectionChange)="this.setConfig($event)">
+    <mat-list-option [selected]="this.darkMode" [value]="'darkMode'">
+      <h4 mat-line><strong>Dark Mode</strong></h4>
+      <p mat-line>{{ !this.darkMode ? 'Enables' : 'Disables' }} Dark Mode</p>
+    </mat-list-option>
+    <mat-list-option [selected]="this.enableNSFW" [value]="'enableNSFW'">
+      <h4 mat-line><strong>NSFW Content</strong></h4>
+      <p mat-line class="text-">{{ !this.enableNSFW ? 'Enables' : 'Disables' }} NSFW Content</p>
+    </mat-list-option>
+  </mat-selection-list>
+</mat-dialog-content>
