@@ -1,0 +1,74 @@
+{
+  "configVersion": 1,
+  "timestamp": 1564433170192,
+  "index": "http://venipa.github.io/ng-neko-splash/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "http://venipa.github.io/ng-neko-splash/5.a1035e9e4e2db6cd8f42.js",
+        "http://venipa.github.io/ng-neko-splash/6.c9ee50402bbd6cc1d574.js",
+        "http://venipa.github.io/ng-neko-splash/favicon.ico",
+        "http://venipa.github.io/ng-neko-splash/index.html",
+        "http://venipa.github.io/ng-neko-splash/main.476c734d7709f68c1e1a.js",
+        "http://venipa.github.io/ng-neko-splash/manifest.json",
+        "http://venipa.github.io/ng-neko-splash/polyfills-es5.93893f560e403d23958a.js",
+        "http://venipa.github.io/ng-neko-splash/polyfills.2d938c2725dce5a6a7bb.js",
+        "http://venipa.github.io/ng-neko-splash/runtime.ea0495213a3a443b5f19.js",
+        "http://venipa.github.io/ng-neko-splash/styles.9bc291df3dc5cea92ded.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "http://venipa.github.io/ng-neko-splash/MaterialIcons-Round.10f830315d9e5cc83ff2.eot",
+        "http://venipa.github.io/ng-neko-splash/MaterialIcons-Round.5a28aa73c3459f352ee2.woff",
+        "http://venipa.github.io/ng-neko-splash/MaterialIcons-Round.85702364b552f3f2a0b2.woff2",
+        "http://venipa.github.io/ng-neko-splash/assets/ngx-rocket-logo.png",
+        "http://venipa.github.io/ng-neko-splash/assets/ngx-rocket-logo@192.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "http://venipa.github.io/ng-neko-splash/5.a1035e9e4e2db6cd8f42.js": "9132e50cdb615b41fd693c6f7a79b399447acbed",
+    "http://venipa.github.io/ng-neko-splash/6.c9ee50402bbd6cc1d574.js": "377738e570beb36f7dd2ffc37b52e7051e1db8c1",
+    "http://venipa.github.io/ng-neko-splash/MaterialIcons-Round.10f830315d9e5cc83ff2.eot": "7e81e2941ccbfdc6c07ab5c10f080dca8524e2d3",
+    "http://venipa.github.io/ng-neko-splash/MaterialIcons-Round.5a28aa73c3459f352ee2.woff": "03ae6171f6fadd7e9c2cbde51cf27203b9e958b4",
+    "http://venipa.github.io/ng-neko-splash/MaterialIcons-Round.85702364b552f3f2a0b2.woff2": "aea2bc1ebf0e90d573bc3d50fb34f4da9fba846a",
+    "http://venipa.github.io/ng-neko-splash/assets/ngx-rocket-logo.png": "0ac53fd27406fe5a36e68285315fb0012e54058e",
+    "http://venipa.github.io/ng-neko-splash/assets/ngx-rocket-logo@192.png": "461b730f9c6dc818f8af9acbe62dfde24dc02d7a",
+    "http://venipa.github.io/ng-neko-splash/favicon.ico": "b65083d46bbf63692d5d2cdd69622e6d7ecae317",
+    "http://venipa.github.io/ng-neko-splash/index.html": "9fd27c14fa039cd7d674033b05f8d031f9342e0a",
+    "http://venipa.github.io/ng-neko-splash/main.476c734d7709f68c1e1a.js": "dd66e73718c24f8aa7309b05bc1ec0229d7dd943",
+    "http://venipa.github.io/ng-neko-splash/manifest.json": "8a8ebc68fbd5a7edc168a1710d06a19e00405b6b",
+    "http://venipa.github.io/ng-neko-splash/polyfills-es5.93893f560e403d23958a.js": "7b6872891aaf8fcb6987dfd987900f0be4f1a956",
+    "http://venipa.github.io/ng-neko-splash/polyfills.2d938c2725dce5a6a7bb.js": "713b0aeade3e0fd2f4c5083eecbe64be2359d4c7",
+    "http://venipa.github.io/ng-neko-splash/runtime.ea0495213a3a443b5f19.js": "216abb8b30ed6bdc3cfb19f5b0038eb0dbf29bfc",
+    "http://venipa.github.io/ng-neko-splash/styles.9bc291df3dc5cea92ded.css": "45eb920601df5298881ec3f0063539a8fab1f80b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
