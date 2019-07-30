@@ -5,10 +5,11 @@ import { RouterModule } from '@angular/router';
 import { NekoHomeRoutingModule } from './neko-home-routing.module';
 import { MaterialModule } from '@app/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoaderModule } from '@app/shared/loader/loader.module';
 
 @NgModule({
   declarations: [NekoHomeComponent],
-  imports: [CommonModule, MaterialModule, FlexLayoutModule, NekoHomeRoutingModule],
+  imports: [CommonModule, MaterialModule, FlexLayoutModule, NekoHomeRoutingModule, LoaderModule],
   exports: [NekoHomeRoutingModule]
 })
 export class NekoHomeModule {}

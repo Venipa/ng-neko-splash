@@ -1,8 +1,29 @@
+@import "src/theme/theme-variables";
+
 .neko-select {
   width: 300px;
 }
-.neko-image-container {
-  max-width: 100%;
-  margin: 0 auto;
-  max-height: 600px;
+.neko-image-wrapper {
+  position: relative;
+
+  .neko-image-container {
+    max-width: 100%;
+    margin: 0 auto;
+    max-height: 600px;
+    min-height: 80px;
+    & {
+      @include mat-elevation(6);
+      transition: box-shadow 0.4s cubic-bezier(0.47, 0, 0.745, 0.715),
+        transform 0.275s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+      transform: translateY(0);
+      &:hover {
+        transform: translateY(-4px);
+        @include mat-elevation(2);
+      }
+    }
+  }
+}
+footer {
+  margin-bottom: 20px;
 }

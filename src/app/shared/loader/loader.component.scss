@@ -1,8 +1,71 @@
-.mat-progress-spinner {
-  display: inline-block;
-  vertical-align: middle;
+@import "src/theme/theme-variables";
+@mixin size($size) {
+  height: $size;
+  width: $size;
 }
 
-.message {
-  margin-left: 0.5em;
+// ::ng-deep body {
+//     overflow: hidden;
+// }
+:host {
+  border-radius: inherit;
+}
+:host ::ng-deep {
+  .app-loader {
+    z-index: 999;
+    position: relative;
+    background-color: inherit;
+    &-fixed,
+    &-cover {
+      top: 0;
+      left: 0;
+      @include size(100%);
+    }
+    &-cover {
+      position: absolute;
+      border-radius: inherit;
+    }
+    &-fixed {
+      position: fixed;
+      z-index: 9999;
+    }
+
+    .loader-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      .loader-content {
+        transform: translate(-50%, -50%);
+
+        .loader-logo {
+          @include size(100px);
+          max-width: 100px;
+          max-height: 100px;
+          margin: 0 auto;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-bottom: 18px;
+        }
+      }
+      .mat-progress-bar {
+        max-width: 100%;
+        border-radius: 5px;
+        margin: 0 auto;
+      }
+      .mat-progress-spinner,
+      .mat-spinner {
+        max-width: 100%;
+        margin: 0 auto;
+        svg {
+          & > circle {
+            stroke: mat-color($app-accent);
+          }
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+  }
 }

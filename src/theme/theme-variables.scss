@@ -84,7 +84,7 @@ $custom-typography: mat-typography-config(
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 $app-primary: mat-palette($mat-black, 900, 800, 1000);
-$app-accent: mat-palette($mat-discord, 900, 800, 1000);
+$app-accent: mat-palette($mat-discord, 500, 600, 800);
 
 // The warn palette is optional (defaults to red).
 $app-warn: mat-palette($mat-red);

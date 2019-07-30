@@ -21,13 +21,19 @@ body {
 @import "./mixins.scss";
 
 $base-radius: 8px;
-
+code.code-container {
+  background-color: rgba(mat-color($app-accent), 0.125);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
 html {
   &.dark {
+    $darkBackground: mat-color($app-primary, 800);
     body,
     .mat-drawer-container,
-    .mat-drawer {
-      background-color: mat-color($app-primary, 800);
+    .mat-drawer,
+    .app-loader {
+      background-color: $darkBackground;
       color: #fff;
     }
     .mat-pseudo-checkbox::after {

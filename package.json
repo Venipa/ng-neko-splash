@@ -2,6 +2,7 @@
   "name": "neko-app",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://venipa.github.io/ng-neko-splash/",
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && ng build --prod",
@@ -18,7 +19,8 @@
     "prettier:check": "prettier --list-different \"./{src,e2e}/**/*.{ts,js,html,scss}\"",
     "postinstall": "npm run prettier -s",
     "parse:images": "node parse-images.js",
-    "generate": "ng generate"
+    "generate": "ng generate",
+    "gh-pages": "ng build --prod --base-href \"/ng-neko-splash/\" && npx ngh"
   },
   "dependencies": {
     "@angular/animations": "^8.1.0",

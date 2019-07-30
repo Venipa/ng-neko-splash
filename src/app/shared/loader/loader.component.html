@@ -1,4 +1,33 @@
-<div [hidden]="!isLoading">
-  <mat-progress-spinner mode="indeterminate" [strokeWidth]="2" [diameter]="32 * size"></mat-progress-spinner>
-  <span class="message">{{ message }}</span>
+<div
+  class="app-loader"
+  [class.app-loader-fixed]="this.coverType === 'fixed'"
+  [class.app-loader-cover]="this.coverType === 'cover'"
+  @fadeOut
+  *ngIf="this.isActive$ | async"
+  [style.backgroundColor]="this.customBackColor"
+>
+  <div class="loader-wrapper">
+    <div class="loader-content" @fadeInOut>
+      <div class="loader-circle">
+        <div *ngIf="this.logoImageUrl">
+          <div class="loader-logo" [style.width]="this.width">
+            <img class="img-responsive" [src]="this.logoImageUrl" alt="" />
+          </div>
+        </div>
+        <div
+          class="text-center mb-3"
+          style="width: 200px; max-width: 100%;"
+          *ngIf="!!this.statusText && this.statusText.trim().length > 0"
+        >
+          {{ this.statusText }}
+        </div>
+        <ng-container *ngIf="this.enableCircle">
+          <mat-spinner [mode]="'indeterminate'" [diameter]="this.width"></mat-spinner>
+        </ng-container>
+        <ng-container *ngIf="!this.enableCircle">
+          <mat-progress-bar [mode]="'indeterminate'" [style.width.px]="this.width"></mat-progress-bar>
+        </ng-container>
+      </div>
+    </div>
+  </div>
 </div>

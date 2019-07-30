@@ -29,7 +29,7 @@ const log = new Logger('NekoHomeComponent');
 export class NekoHomeComponent implements OnInit {
   readonly refresh = new Subject<boolean>();
   readonly refresh$ = this.refresh.asObservable();
-  private loading = new BehaviorSubject<boolean>(false);
+  private loading = new BehaviorSubject<boolean>(true);
   readonly loading$ = this.loading.asObservable().pipe(distinctUntilChanged());
   private _items = new BehaviorSubject<NekoImageMd[]>(null);
   readonly items = this._items.asObservable().pipe(distinctUntilChanged());
@@ -55,9 +55,9 @@ export class NekoHomeComponent implements OnInit {
         this.loading.next(true);
         return this.nekoService.requestImage(x);
       })
-    ),
-    map(x => this.sanitization.bypassSecurityTrustResourceUrl(x.url))
+    )
   );
+  readonly image$safeUrl = this.image$.pipe(map(x => this.sanitization.bypassSecurityTrustResourceUrl(x.url)));
   constructor(private nekoService: NekoService, private appService: AppService, private sanitization: DomSanitizer) {
     this.nekoService.getImages().subscribe(x => this._items.next(x));
     this.items
@@ -70,6 +70,9 @@ export class NekoHomeComponent implements OnInit {
   }
   changeSelection(ev: MatSelectChange) {
     this.selectedItem.next(ev.value);
+  }
+  getHTML(url: string) {
+    return `<img src="${url}" alt="nekos.life" />`;
   }
   imageDoneLoading(ev: Event) {
     this.loading.next(false);
