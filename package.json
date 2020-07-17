@@ -38,7 +38,7 @@
     "@ngx-translate/core": "^11.0.1",
     "angular-cli-ghpages": "^0.5.3",
     "hammerjs": "^2.0.8",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "material-design-icons-iconfont": "https://github.com/Venipa/material-design-icons-iconfont",
     "rxjs": "^6.5.2",
     "zone.js": "^0.9.1"
